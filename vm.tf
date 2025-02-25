@@ -16,10 +16,10 @@ resource "aws_instance" "web" {
   }
 
   connection {
-    type        = "ssh"
-    user        = "ubuntu"
-    private_key = file("./local.pem")
-    host        = self.public_ip
+    type     = "ssh"
+    user     = "ubuntu"
+    password = "SuperSecretPassword123!"
+    host     = self.public_ip
   }
 
   provisioner "remote-exec" {
