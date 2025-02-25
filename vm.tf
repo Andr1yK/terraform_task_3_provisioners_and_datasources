@@ -1,3 +1,8 @@
+# NOTE: Since Azure is not available to me, this solution uses AWS.
+# The EC2 instance replaces an Azure Virtual Machine.
+# AWS security groups replace Azure NSGs.
+# AWS S3 can replace Azure Blob Storage if needed.
+
 resource "aws_instance" "web" {
   ami                         = "ami-035f91feb765a0ee1" # Update for your region
   instance_type               = "t2.micro"
